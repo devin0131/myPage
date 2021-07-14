@@ -50,31 +50,81 @@
             letter-spacing: 10px;
             color: #fff;
         }
-        #downloadVPN{
-            text-decoration:none;
-        }
-        #downloadVPN:link {
-            color: #fff;
-        }
-        #downloadVPN:visited {
-            color: #fff;
-        }
-        #downloadVPN:hover {
-            color: #c33e1a;
-        }
+
         .doyourbest {
-            position: absolute;
-            text-align: center;
-            letter-spacing: 2px;
+            /* display: flex;
+            justify-content: center;
+            
+            /* text-align: center; */
+            /* letter-spacing: 2px;
             font-size: 140px;
-            font-family:fantasy;
-            top: 120vh;
+            font-family:fantasy; */
+            position: absolute;
+            top: 130vh;
             width: 60%;
-            color: #fff;
             left: 50%;
             transform: translateX(-50%);
-            padding: 100px;
+            padding: 50px; 
+            
             background-color: rgba(0, 0, 0, .3);
+            display: flex;
+            justify-content: center;
+        }
+        .dyb-word {
+            position: relative;
+            /* top: 250px; */
+            /* font-size: 4px; */
+            /* width: 30%; */
+            /* width: max-content; */
+            display: flex;
+            justify-content: center;
+            /* margin: 10px 30px; */
+        }
+        #word-do {
+            width: 20%;
+        }
+        #word-your{
+            width: 35%;
+        }
+        #word-best{
+            width: 30%;
+        }
+        #word-exclamation{
+            width: 10%;
+        }
+
+        .uphalf,.Downhalf{
+            font: 900 120px '';
+            line-height: 150px;
+            position: absolute;
+            color: rgb(255, 255, 255);
+            top: 0;
+            /* 使文字上下移动时有0.4s的过渡效果 */
+            transition: .4s;
+        }
+        .dyb-word:hover .uphalf,.dyb-word:hover .Downhalf{
+            /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+            top: calc(var(--i)*1px);
+        }
+        .dyb-word:hover .dyb-href{
+            opacity: 1;
+        }
+        .dyb-href {
+            text-decoration: none;
+            color: rgb(203,68,33);
+            font: 600 30px '';
+            line-height: 150px;
+            opacity: 0;
+            transition: .3s;
+            font-family: Times, "Times New Roman", Georgia, serif;
+        }
+
+        .uphalf{
+            clip-path: inset(1% 0% 50% 0%);
+        }
+        .Downhalf{
+            clip-path: inset(49% 0 0 0);
         }
     </style>
 </head>
@@ -88,7 +138,26 @@
         connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
         magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
         view of the Dadu River and Qingyi River -->
-        Do Your Best<a id="downloadVPN" title="去下载VPN有关的文件!" href="http://sidx.fun:8080">!</a> 
+        <div class="dyb-word" id="word-do">
+            <div class="uphalf" style="--i:-30">Do</div>
+            <div class="Downhalf" style="--i:30">Do</div>
+            <a class="dyb-href" href="#">➡</a>
+        </div>
+        <div class="dyb-word" id="word-your">
+            <div class="uphalf" style="--i:-30">Your</div>
+            <div class="Downhalf" style="--i:30">Your</div>
+            <a class="dyb-href" href="#"></a>
+        </div>
+        <div class="dyb-word" id="word-best">
+            <div class="uphalf" style="--i:-30">Best</div>
+            <div class="Downhalf" style="--i:30">Best</div>
+            <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
+        </div>
+        <div class="dyb-word" id="word-exclamation">
+            <div class="uphalf" style="--i:-30">!</div>
+            <div class="Downhalf" style="--i:30">!</div>
+            <a class="dyb-href" href="#">⬅</a>
+        </div>
     </div>
 
     <script>
