@@ -8,30 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MagizioのPersonal Page</title>
     <style>
-        html,
+        html{
+            overflow-y: hidden;
+        }
         body {
             margin: 0;
             padding: 0;
-            
+            height: 100vh;
+            overflow-y:scroll;
             overflow-x: hidden;
+            perspective: 100px;
+            transform-style: preserve-3d;
         }
         #record {
+            
             position: absolute;
             width: 100%;
-            top:190vh;
-            color:ivory;
+            /* top:10vh; */
             text-align: center;
+            bottom: -70vh ;
+            
+            /* transform:translateY(120vh); */
+            /* display: none; */
         }
-        .glsc{
-            height: 200vh;
-            perspective: 2px;
+        #record a{
+            color:ivory;
         }
         .background {
             background-image: url("backgroup.jpg");
             background-size: cover;
             background-position: 50% 50%;
             /* height: 250vh; */
-            top:0;
+            /* top:0; */
             font: 900 28vw '';
             line-height: 110vh;
             text-align: center;
@@ -42,11 +50,13 @@
             /* top:0; */
             left: 0;
             width: 100%;
-            height: inherit;
+            height: 180vh;
             overflow: hidden;
+            /* transform: translateZ(-2px) scale(2); */
             /* display:inline-block; */
         }
         .background::before {
+            /* display: none; */
             content: '';
             background-size: cover;
             background-image: inherit;
@@ -71,15 +81,8 @@
         }
 
         .doyourbest {
-            /* display: flex;
-            justify-content: center;
-            
-            /* text-align: center; */
-            /* letter-spacing: 2px;
-            font-size: 140px;
-            font-family:fantasy; */
-            position: absolute;
-            top: 125vh;
+            position: relative;
+            /* top: 125vh; */
             width: 60%;
             left: 50%;
             height: 7.7vw; 
@@ -87,8 +90,7 @@
             background-color: rgba(0, 0, 0, .3);
             display: flex;
             justify-content: center;    
-            transform: translateX(-50%) translateZ(1px) scale(0.5) translateY(-60vh);
-            /* align-items:center; */
+            transform: translateX(-50%) translateY(100vh) translateZ(30px) scale(0.5);
         }
         .dyb-word {
             position: relative;
@@ -102,7 +104,7 @@
             width: 8vw;
         }
         #word-your{
-            width: 18vw;
+            width: 22vw;
         }
         #word-best{
             width: 14vw;
@@ -151,47 +153,50 @@
 
 <body>
     <h1>Magizio<br />の<br />Personal Page</h1>
-    <div class="glsc">
-        <div class="background">
-            <span>继  续</span>
+    <div class="background">
+        <span>继  续</span>
+    </div>
+    <div class="doyourbest">
+        <!-- In winter, it is covered with snow and snow. When you climb to Jinding, you can see far and wide, and the
+        scenery is very magnificent; West overlooking Aiai snow peak, Gongga Mountain and Wawu mountain, the mountains
+        connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
+        magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
+        view of the Dadu River and Qingyi River -->
+        <div class="dyb-word" id="word-do">
+            <div class="uphalf" style="--i:-30">Do</div>
+            <div class="Downhalf" style="--i:30">Do</div>
+            <a class="dyb-href" href="#">➡</a>
         </div>
-        <div class="doyourbest">
-            <!-- In winter, it is covered with snow and snow. When you climb to Jinding, you can see far and wide, and the
-            scenery is very magnificent; West overlooking Aiai snow peak, Gongga Mountain and Wawu mountain, the mountains
-            connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
-            magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
-            view of the Dadu River and Qingyi River -->
-            <div class="dyb-word" id="word-do">
-                <div class="uphalf" style="--i:-30">Do</div>
-                <div class="Downhalf" style="--i:30">Do</div>
-                <a class="dyb-href" href="#">➡</a>
-            </div>
-            <div class="dyb-word" id="word-your">
-                <div class="uphalf" style="--i:-30">Your</div>
-                <div class="Downhalf" style="--i:30">Your</div>
-                <a class="dyb-href" href="#" title="观看安装配置的教程！">教程</a>
-            </div>
-            <div class="dyb-word" id="word-best">
-                <div class="uphalf" style="--i:-30">Best</div>
-                <div class="Downhalf" style="--i:30">Best</div>
-                <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
-            </div>
-            <div class="dyb-word" id="word-exclamation">
-                <div class="uphalf" style="--i:-30">!</div>
-                <div class="Downhalf" style="--i:30">!</div>
-                <a class="dyb-href" href="#">⬅</a>
-            </div>
+        <div class="dyb-word" id="word-your">
+            <div class="uphalf" style="--i:-30">Your</div>
+            <div class="Downhalf" style="--i:30">Your</div>
+            <a class="dyb-href" href="#" title="观看安装配置的教程！">教程</a>
+        </div>
+        <div class="dyb-word" id="word-best">
+            <div class="uphalf" style="--i:-30">Best</div>
+            <div class="Downhalf" style="--i:30">Best</div>
+            <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
+        </div>
+        <div class="dyb-word" id="word-exclamation">
+            <div class="uphalf" style="--i:-30">!</div>
+            <div class="Downhalf" style="--i:30">!</div>
+            <a class="dyb-href" href="#">⬅</a>
         </div>
     </div>
-    <a id="record" href="https://beian.miit.gov.cn/" target="_blank">冀ICP备20004348号-1</a>
+    <div id="record">
+        <a href="https://beian.miit.gov.cn/" target="_blank">冀ICP备20004348号-1</a>
+    </div>
 
     <script>
+        const body = document.querySelector("body")
         const background = document.querySelector(".background")
-
-        document.addEventListener('scroll', () => {
-            const scrollY = window.scrollY
-
+        // const glscscrollTop = document.querySelector(".glsc")
+        // window.alert(body)
+        body.addEventListener('scroll', () => {
+            const scrollY = body.scrollTop
+            // window.alert(scrollY)
             if (scrollY !== 0) {
+                // windwo.alert(glscscrollTop);
                 background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
             }else{
                 background.style.backgroundPosition = ''
