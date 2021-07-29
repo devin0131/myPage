@@ -12,7 +12,7 @@
         body {
             margin: 0;
             padding: 0;
-            height: 200vh;
+            
             overflow-x: hidden;
         }
         #record {
@@ -21,6 +21,10 @@
             top:190vh;
             color:ivory;
             text-align: center;
+        }
+        .glsc{
+            height: 200vh;
+            perspective: 2px;
         }
         .background {
             background-image: url("backgroup.jpg");
@@ -39,7 +43,6 @@
             left: 0;
             width: 100%;
             height: inherit;
-
             overflow: hidden;
             /* display:inline-block; */
         }
@@ -64,6 +67,7 @@
             width: 100%;
             letter-spacing: 10px;
             color: #fff;
+            z-index: 1;
         }
 
         .doyourbest {
@@ -79,11 +83,11 @@
             width: 60%;
             left: 50%;
             height: 7.7vw; 
-            transform: translateX(-50%);
             padding: 8vw; 
             background-color: rgba(0, 0, 0, .3);
             display: flex;
             justify-content: center;    
+            transform: translateX(-50%) translateZ(1px) scale(0.5) translateY(-60vh);
             /* align-items:center; */
         }
         .dyb-word {
@@ -147,34 +151,36 @@
 
 <body>
     <h1>Magizio<br />の<br />Personal Page</h1>
-    <div class="background">
-        <span>继  续</span>
-    </div>
-    <div class="doyourbest">
-        <!-- In winter, it is covered with snow and snow. When you climb to Jinding, you can see far and wide, and the
-        scenery is very magnificent; West overlooking Aiai snow peak, Gongga Mountain and Wawu mountain, the mountains
-        connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
-        magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
-        view of the Dadu River and Qingyi River -->
-        <div class="dyb-word" id="word-do">
-            <div class="uphalf" style="--i:-30">Do</div>
-            <div class="Downhalf" style="--i:30">Do</div>
-            <a class="dyb-href" href="#">➡</a>
+    <div class="glsc">
+        <div class="background">
+            <span>继  续</span>
         </div>
-        <div class="dyb-word" id="word-your">
-            <div class="uphalf" style="--i:-30">Your</div>
-            <div class="Downhalf" style="--i:30">Your</div>
-            <a class="dyb-href" href="#" title="观看安装配置的教程！">教程</a>
-        </div>
-        <div class="dyb-word" id="word-best">
-            <div class="uphalf" style="--i:-30">Best</div>
-            <div class="Downhalf" style="--i:30">Best</div>
-            <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
-        </div>
-        <div class="dyb-word" id="word-exclamation">
-            <div class="uphalf" style="--i:-30">!</div>
-            <div class="Downhalf" style="--i:30">!</div>
-            <a class="dyb-href" href="#">⬅</a>
+        <div class="doyourbest">
+            <!-- In winter, it is covered with snow and snow. When you climb to Jinding, you can see far and wide, and the
+            scenery is very magnificent; West overlooking Aiai snow peak, Gongga Mountain and Wawu mountain, the mountains
+            connect the sky; Looking south at the top of Ten Thousand Buddhas, the clouds are rolling and the momentum is
+            magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
+            view of the Dadu River and Qingyi River -->
+            <div class="dyb-word" id="word-do">
+                <div class="uphalf" style="--i:-30">Do</div>
+                <div class="Downhalf" style="--i:30">Do</div>
+                <a class="dyb-href" href="#">➡</a>
+            </div>
+            <div class="dyb-word" id="word-your">
+                <div class="uphalf" style="--i:-30">Your</div>
+                <div class="Downhalf" style="--i:30">Your</div>
+                <a class="dyb-href" href="#" title="观看安装配置的教程！">教程</a>
+            </div>
+            <div class="dyb-word" id="word-best">
+                <div class="uphalf" style="--i:-30">Best</div>
+                <div class="Downhalf" style="--i:30">Best</div>
+                <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
+            </div>
+            <div class="dyb-word" id="word-exclamation">
+                <div class="uphalf" style="--i:-30">!</div>
+                <div class="Downhalf" style="--i:30">!</div>
+                <a class="dyb-href" href="#">⬅</a>
+            </div>
         </div>
     </div>
     <a id="record" href="https://beian.miit.gov.cn/" target="_blank">冀ICP备20004348号-1</a>
