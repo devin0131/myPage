@@ -85,7 +85,7 @@
             /* top: 125vh; */
             width: 60%;
             left: 50%;
-            height: 7.7vw; 
+            height: 12vw; 
             padding: 8vw; 
             background-color: rgba(0, 0, 0, .3);
             display: flex;
@@ -98,6 +98,7 @@
             display: flex;
             justify-content: center;
             align-items:center; 
+            height: inherit;
             /* margin: 10px 30px; */
         }
         #word-do {
@@ -114,27 +115,32 @@
         }
 
         .uphalf,.Downhalf{
-            font: 900 7.7vw '';
-            /* line-height: 150px; */
             position: absolute;
+            font-family: Times, "Times New Roman", Georgia, serif;
+            display: flex;
+            align-items: center;
+            height: inherit;
+            font: 900 7.7vw '';
             color: rgb(255, 255, 255);
-            top: -1;
-            /* 使文字上下移动时有0.4s的过渡效果 */
             transition: .4s;
+            
         }
         .dyb-word:hover .uphalf,.dyb-word:hover .Downhalf{
             /* 让--i为30的向上移动30px，-30的向下移动30px
             这样子就能空出60px留给中间的超链接 */
-            top: calc(var(--i)*1px);
+            top: calc(var(--i)*1vw);
         }
         .dyb-word:hover .dyb-href{
             opacity: 1;
         }
         .dyb-href {
-            /* position: absolute; */
+            position: absolute;
+            display: flex;
+            align-items: center;
             text-decoration: none;
             color: rgb(203,68,33);
-            font: 600 30px '';
+            font: 600 3vw '';
+            height: inherit;
             /* top:0; */
             /* line-height: 150px; */
             opacity: 0;
@@ -163,24 +169,24 @@
         magnificent; A panoramic view of the Pingchuan River in the north is as beautiful as a shop, with a panoramic
         view of the Dadu River and Qingyi River -->
         <div class="dyb-word" id="word-do">
-            <div class="uphalf" style="--i:-30">Do</div>
-            <div class="Downhalf" style="--i:30">Do</div>
-            <a class="dyb-href" href="#">➡</a>
+            <div class="uphalf" style="--i:-3"><span>Do</span></div>
+            <div class="Downhalf" style="--i:3"><span>Do</span></div>
+            <a class="dyb-href" href="#"><span>➡</span></a>
         </div>
         <div class="dyb-word" id="word-your">
-            <div class="uphalf" style="--i:-30">Your</div>
-            <div class="Downhalf" style="--i:30">Your</div>
-            <a class="dyb-href" href="#" title="观看安装配置的教程！">教程</a>
+            <div class="uphalf" style="--i:-3"><span>Your</span></div>
+            <div class="Downhalf" style="--i:3"><span>Your</span></div>
+            <a class="dyb-href" href="#" title="观看安装配置的教程！"><span>教程</span></a>
         </div>
         <div class="dyb-word" id="word-best">
-            <div class="uphalf" style="--i:-30">Best</div>
-            <div class="Downhalf" style="--i:30">Best</div>
-            <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" >下载</a>
+            <div class="uphalf" style="--i:-3"><span>Best</span></div>
+            <div class="Downhalf" style="--i:3"><span>Best</span></div>
+            <a class="dyb-href" href="http://sidx.fun:8080" title="去下载VPN有关的文件!" ><span>下载</span></a>
         </div>
         <div class="dyb-word" id="word-exclamation">
-            <div class="uphalf" style="--i:-30">!</div>
-            <div class="Downhalf" style="--i:30">!</div>
-            <a class="dyb-href" href="#">⬅</a>
+            <div class="uphalf" style="--i:-3"><span>!</span></div>
+            <div class="Downhalf" style="--i:3"><span>!</span></div>
+            <a class="dyb-href" href="#"><span>⬅</span></a>
         </div>
     </div>
     <div id="record">
