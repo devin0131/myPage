@@ -122,13 +122,13 @@
             height: inherit;
             font: 900 7.7vw '';
             color: rgb(255, 255, 255);
-            transition: .4s;
+            transition: transform 0.4s;
             
         }
         .dyb-word:hover .uphalf,.dyb-word:hover .Downhalf{
             /* 让--i为30的向上移动30px，-30的向下移动30px
             这样子就能空出60px留给中间的超链接 */
-            top: calc(var(--i)*1vw);
+            transform: translateY(calc(var(--i)*1vw));
         }
         .dyb-word:hover .dyb-href{
             opacity: 1;
@@ -139,7 +139,7 @@
             align-items: center;
             text-decoration: none;
             color: rgb(203,68,33);
-            font: 600 3vw '';
+            font: 900 3vw '';
             height: inherit;
             /* top:0; */
             /* line-height: 150px; */
